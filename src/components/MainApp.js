@@ -4,6 +4,7 @@ import Header from "./Header";
 import contactUs from "./contactUs";
 import Home from "./Home";
 import FooterDetails from './FooterDetails';
+import Demo from '../../Demo';
 
 export default function MainApp() {
     return (
@@ -12,6 +13,7 @@ export default function MainApp() {
         <Switch>
           <Route path="/" exact={true} component={Home} />
           <Route path="/contact" component={contactUs} />
+          <Route path="/demo" component={Demo} />
         </Switch>
         <FooterDetails />
         </>

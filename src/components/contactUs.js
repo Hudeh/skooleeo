@@ -1,5 +1,5 @@
 import React from "react";
-import naija from "./assets/images/9ja.png";
+
 
 export default function contactUs() {
   return (
