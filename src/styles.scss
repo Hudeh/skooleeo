@@ -1,0 +1,497 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: whitesmoke;
+}
+@mixin form-input {
+  display: block;
+  widows: 500px;
+  p{
+    margin-bottom: 2px;
+  }
+  input {
+    width: 600px;
+    height: 50px;
+    border-radius: 10px;
+    background: transparent;
+    outline: none;
+    border: .1rem rgb(211, 208, 208) solid;
+  }
+}
+//  mixins
+@mixin left-links {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 480px;
+  width: 20rem;
+  align-items: center;
+  cursor: pointer;
+  .new-customer {
+    font: size 25px;
+    color: #000000;
+    font-weight: 600px;
+    text-decoration: none !important;
+  }
+  .try {
+    background-color: rgb(82, 8, 100);
+    font-size: 17px;
+    color: #ffffff;
+    border-radius: 50px;
+    height: 2.2rem;
+    width: 10rem;
+    text-align: center;
+    padding-top: 10px;
+  }
+}
+
+@mixin btn {
+  height: 54px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 30px;
+  background-color: rgb(82, 8, 100);
+  border:rgb(82, 8, 100) .8px solid ;
+  width: 600px;
+  color: #ffffff;
+  font-size: 20px;
+  margin-top: 50px;
+  outline: none;
+}
+
+// header css
+.header{
+  display: flex;
+  height: 4rem;
+  background-color: #ffffff;
+  margin-bottom: 150px;
+  cursor: pointer;
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    .dropdown-content {
+      display: none;
+      width: 1290px;
+      height: auto;
+      position: absolute;
+      top: 86%;
+      background-color: #ffffff;
+      min-width: 500px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      .dev {
+        display: flex;
+        color:#333;
+        padding: 12px 16px;
+        text-decoration: none;
+        justify-content: space-between;
+        &:hover {background-color: rgb(255, 255, 255);}
+        .dev-inner{
+          display: block;
+          text-decoration: none;
+        }
+      }
+    }
+    .dropbtn {
+      color:#000000;
+      padding: 16px;
+      font-size: 20px;
+      display: flex;
+  }
+  &:hover .dropdown-content {display: block;}
+  }
+  .right-links{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    justify-content: space-between;
+    width: 550px;
+    .log-img{
+      align-items: center;
+      text-decoration: none !important;
+      display: flex;
+    }
+  }  
+  .left-links{
+    @include left-links
+  }
+}
+
+// home
+.home-container{
+  background-color: #fff;
+  margin-top: -150px;
+  padding: 0 20px 0 80px;
+  .layout-1{
+    display: flex;
+    .collaborate{
+      margin-top: 150px;
+      margin-right: 70px;
+      width: 550px;
+      :first-child{
+        font-size: 45px;
+        font-weight: bolder;
+      }
+      .subtitle{
+        font-size: 20px;
+        font-weight: 400;
+        color: #333;
+      }
+      .btn{
+        background-color: rgb(82, 8, 100);
+        font-size: 25px;
+        color: #ffffff;
+        border-radius: 50px;
+        height: 3.5rem;
+        width: 15rem;
+        text-align: center;
+        padding-top: 5px;
+      }
+    }
+    .team{
+      margin-top: 50px;
+      img{
+      width: 700px;
+      height: 400px;
+    }
+    .play{
+      position: absolute;
+      top:160%;
+      margin-left: -360px;
+      font-size: 60px !important;
+    }
+    }
+  }
+  .layout-2{
+    margin-top: 90px;
+    margin-bottom: 40px;
+    text-align: center;
+    h3{
+      font-size: 25px;
+    }
+    .company-logos{
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-around;
+      img{
+        width: 120px;
+        height: 60px;
+      }
+    }
+  }.layout-3{
+    margin-top: 90px;
+    .tab{
+      display: flex;
+      height: 5.2rem;
+      margin-bottom: 20px;
+      .tab1{
+        padding: 15px 20px 5px 20px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: rgb(82, 8, 100);
+        align-items: center;
+        color: #ffffff;
+        font-size: 20px;
+      }
+      .tab2{
+        padding: 10px 20px 5px 20px;
+        border-top: 1px #333 solid;
+        border-right: 1px #333 solid;
+        border-bottom: 1px #333 solid;
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        width: 1200px;
+        align-items: center;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+  
+}
+#bg{
+  margin-top:40px;
+  background-color:  rgb(82, 8, 100);
+  height: 4rem;
+}
+
+// login css
+.login-container {
+  height: auto;
+  margin-bottom: 30px;
+  .login-header {
+    display: flex;
+    cursor: pointer;
+    justify-content: space-evenly;
+    background-color: white;
+    height: 4rem;
+    justify-items: center;
+    padding: 5px 0 5px 0;
+    align-items: center;
+    .logo {
+      margin-right: 100px;
+    }
+    .left-links {
+     @include left-links
+    }
+  }
+  .login-form {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 8px 8px 5px rgb(219, 216, 216);
+    width: 700px;
+    max-width: 1200px;
+    height: 680px;
+    max-height: 700px;
+    margin: auto;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    .form-header {
+      text-align: center;
+    }
+
+    .form {
+      width: 600px;
+      height: 450px;
+      margin: auto;
+      .email {
+        @include form-input;
+        }
+    
+      .password {
+       @include form-input;
+       .icon-input{
+         display: flex;
+         border-radius: 10px;
+         border: .1rem rgb(211, 208, 208) solid;
+         width: 605px;
+         input {
+          width: 600px;
+          height: 50px;
+          background: transparent;
+          outline: none;
+          border: none;
+        }
+        .eye{
+          margin-top: 25px;
+          margin-right: 10px;
+        }
+       }
+      }
+      .forgot-password{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
+      a {
+        color: #888;
+        text-decoration: underline;
+      }
+      .btn {
+       @include btn
+      }
+      .signin-with{
+        text-align: center;
+        margin-top: 25px;
+      }
+    
+    .social-login {
+        display: flex;
+        margin-top: 30px;
+        text-align:center;
+        margin-left: 200px;
+        .outlook{
+          margin-right: 15px;
+        }
+        .linkdin{
+          margin-right: 15px;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+  }
+// contact form
+.contact-us{
+  display: flex;
+  width: 1400px;
+  margin: 0 auto 50px auto ;
+  .contact-form{
+    border-radius: 20px;
+    display: block;
+    background-color: white;
+    width: 800px;
+    height: 700px;
+    max-width: 1200px;
+    box-sizing: border-box;
+    box-shadow: 8px 8px 5px rgb(219, 216, 216);
+    margin-top: -50px;
+    padding: 20px 15px 10px 40px;
+    .form-group{
+
+      width: 700px;
+      height: 600px;
+      .form-group-1{
+        display: flex;
+        margin: 25px 0 5px 0;
+        justify-content: space-around;
+        input{
+          height: 45px;
+          width: 300px;
+          outline: none;
+          border: .1rem rgb(211, 208, 208) solid;
+        }
+      }
+      .form-group-2{
+        display: block;
+        margin: 5px 0 5px 0;
+        input{
+          height: 45px;
+          width: 650px;
+          outline: none;
+          border: .1rem rgb(211, 208, 208) solid;
+        }
+      }
+      .form-group-3{
+        display: block;
+        justify-content: space-around;
+        .phone{
+          height: 45px;
+          border: .1rem rgb(211, 208, 208) solid;
+          width: 653px;
+          input{
+            width: 400px;
+            border: none;
+            outline: none;
+            border-left: .1rem rgb(211, 208, 208) solid;
+          }
+          select{
+            height: 45px;
+            border: none;
+          }
+        }
+      }
+      .form-group-4{
+        display: block;
+        margin: 5px 0 5px 0;
+        select{
+          height: 50px;
+          width: 655px;
+          outline: none;
+          border: .1rem rgb(211, 208, 208) solid;
+        }
+      }
+      .form-group-5{
+        display: flex;
+        margin: 5px 0 5px 0;
+        input{
+          height: 48px;
+          width: 300px;
+          outline: none;
+          border: .1rem rgb(211, 208, 208) solid;
+        }
+        select{
+          height: 50px;
+          width: 300px;
+          outline: none;
+          border: .1rem rgb(211, 208, 208) solid;
+        }
+      }
+      .form-group-6{
+        display: block;
+        margin: 5px 0 5px 0;
+        input{
+          height: 80px;
+          width: 650px;
+          outline: none;
+          border: .1rem rgb(211, 208, 208) solid;
+        }
+      } 
+      .btn{
+        @include btn
+      } 
+    }
+  }
+  .notice-board{
+    padding-left: 20px;
+    margin-left: 50px;
+    .addresses{
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+// footer details
+.footer-details{
+  padding-top: 70px;
+  height: 400px;
+  background-color: #fff;
+  border-bottom:.1rem rgb(218, 212, 212) solid ;
+  .logo-select{
+    display: flex;
+    justify-content: space-evenly;
+    .logo{
+      width: 1200px;
+      align-items: center;
+      text-decoration: none !important;
+      display: flex;
+      img{
+        width: 70px;
+        height: 80px;
+        border-radius: 50%;
+      }
+    }
+    .select{
+      border:2px solid rgb(82, 8, 100);
+      width: 150px;
+      height: 30px;
+      border-radius: 10px;
+      padding: 5px 10px 5px 10px;
+      select{
+        border: none;
+        outline: none;
+        width: 150px;
+      }
+    }
+  }
+  .contact-menu-links{
+    margin-top:40px;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 40px 5px 45px;
+    .get-intouch{
+      width: 400px;
+    .social-media{
+      display: flex;
+      #social{
+      font-size: 40px !important;
+      }
+    }
+  }
+  .menu-links{
+    display: flex;
+    width: 1200px;
+    justify-content: space-around;
+  }
+}
+#bold{
+  font-weight: 600;
+}
+}
+// footer
+.footer{
+  height: 3.5rem;
+  background-color: white;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
